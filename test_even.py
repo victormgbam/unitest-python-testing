@@ -6,5 +6,13 @@ class TestEvens(unittest.TestCase):
         self.assertRaises(TypeError, even_number_evens, 4) 
 
 
+
+    def test_values_in_list(self):
+        self.assertEqual(even_number_evens([]), False)
+        self.assertEqual(even_number_evens([2, 4]), True)
+        self.assertEqual(even_number_evens([2]), False)
+        self.assertEqual(even_number_evens([1, 3, 5]), False)   
+
+
 if __name__ == '__main__':
     unittest.main()
